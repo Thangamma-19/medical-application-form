@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Information Form</h1>
+        <form id="medicalForm" action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+                <small>Format: 1234567890</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medicalHistory">Medical History</label>
+                <textarea id="medicalHistory" name="medicalHistory" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="allergies">Known Allergies</label>
+                <input type="text" id="allergies" name="allergies">
+            </div>
+
+            <div class="form-group">
+                <label for="medications">Current Medications</label>
+                <input type="text" id="medications" name="medications">
+            </div>
+
+            <div class="form-group">
+                <label for="emergencyContact">Emergency Contact Name</label>
+                <input type="text" id="emergencyContact" name="emergencyContact" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergencyContactNumber">Emergency Contact Number</label>
+                <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" pattern="[0-9]{10}" required>
+                <small>Format: 1234567890</small>
+            </div>
+
+            <div class="form-group">
+                <label for="insurance">Insurance Provider</label>
+                <input type="text" id="insurance" name="insurance">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
